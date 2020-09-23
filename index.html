@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="A blog post discussing entry into the fighting game genre">
+  <link rel="stylesheet" type="text/css" href="css/main.css" media="all"/>
+  <!-- https://github.com/arashmanteghi/simptip/ -->
+  <link rel="stylesheet" type="text/css" href="css/simptip.css" media="all"/>
+  <!-- https://vuejs.org/v2/guide/ -->
+  <!-- <script src="js/vue.js"></script> -->
+  <title>Fighting Game Blog</title>
+</head>
+<body>
+<nav class="navbar">
+  <input type="checkbox" id="responsive-menu" onclick="updatemenu()"><label></label>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a class="dropdown-arrow">Articles</a>
+      <ul class="sub-menus">
+        <li><a href="#">Getting Started</a></li>
+      </ul>
+    </li>
+    <li><a href=#>Character Info</a></li>
+    <li><a href=#>About</a></li>
+  </ul>
+</nav>
+<script>
+  function updatemenu() {
+    if (document.getElementById("responsive-menu").checked == true) {
+      document.getElementById("menu").style.borderBottomRightRadius = "0";
+      document.getElementById("menu").style.borderBottomLeftRadius = "0";
+    }else{
+      document.getElementById("menu").style.borderRadius = "0px";
+    }
+  }
+</script>
+
+
+<!-- <div id="app"> -->
+<div class="mainContent">
+  <div class="center">
+    <h2>Getting Started with Fighting Games</h2>
+    <p class="subtitle italic">By
+      Tarkus Lee
+    </p>
+    <img 
+      class="titleImg"
+      src="assets/img/GBVS_Gran_Intro.webp" 
+      alt="Gran"s Face During Tempest Blade"
+    >
+  </div>
+  <h3>Preface</h3>
+  <p>
+    If you are brand new to fighting games people are going to be excited to teach you, and as a result they are going to throw a lot of stuff at you. don"t bother with that yet. My advice is to get into the game in an organic way. Spending 20 hours in the training mode labbing an optimal combo will not help when the other guy you are playing goes full
+    <span
+      class="features simptip-position-top simptip-smooth simptip-multiline simptip-movable"
+      data-tooltip="A derogatory term referring to aggressive characters or play styles which disrespect what the other player"s options are."
+    >
+      Unga Bunga
+    </span>
+    and puts you in a tornado of hitting you with the same string over and over again.
+    <a href="https://twitter.com/sajam">Sajam</a> Said it best:
+  </p>
+  <blockquote>
+    <p>
+      Training Mode is a place to solve problems, and as a new player you don"t even know what the problems are yet. Spending 10 hours in training mode before you have really played the game is like you have some wood and a hammer and a nail and you don"t even know what you are building or which end of the hammer to use.
+    </p>
+    <cite>
+      &mdash; Stephen "Sajam" Lyon,
+      <a href="https://youtu.be/b5M4Qxjan6A">YouTube</a>
+    </cite>
+  </blockquote>
+  <p>
+    Your goal as a new player in the genre is not to master the combos or learn all the system mechanics or even to have a mental flowchart of the game state. Your goal is to get comfortable with the controls, find a character you vibe with, and most importantly have fun.
+  </p>
+  <h3>Your First Days</h3>
+  <p>
+    There are two things that are top priority when you pick up a fighting game for the first time with no outside knowledge.
+  </p>
+  <ol>
+    <li>Do the tutorials (if the game has them)</li>
+    <li>Try out each of the characters in arcade mode</li>
+  </ol>
+  <p>
+    Point 1 is a little dubious so allow me to elaborate. Some games have either no tutorials or bad tutorials, and some games have way too much tutorial for one sitting. Take for example
+    <a href="https://wiki.gbl.gg/w/Under_Night_In-Birth">
+      UNICLR
+    </a> or 
+    <a href="https://wiki.gbl.gg/w/Skullgirls">
+      Skullgirls
+    </a>. These games have very robust tutorials that cover a lot of great info, but you neither need nor can handle all of this information in one sitting. Even experienced fighting game players struggle to internalize all of the information presented at once if they try to do the tutorials in one sitting.
+  </p>
+  <p>
+    As a result, you should do enough tutorials to cover the basics. Sometimes a game will straight up tell you when you are doing the basic, intermediate, or advanced content, and some times they won"t. If it"s the case of the latter you simply need to hold yourself accountable and stop doing tutorials when you feel like your mental stack is full.
+  </p>
+  <p>
+    It may not sound like it, but point 2 is just as valuable as point 1. In fighting games, people often talk about "feel". This is a term without a clear definition, but it generally means how your hands, mind, and game connect. To put it simply, you want to find something that "feels right". This is where slapping the buttons against an easy AI opponent is good. You get to experience how the character moves, you get to see first hand what the buttons are like, how much health they have, and all the other basic details of the character. I recommend doing this for every character, but if you don"t want to do every character, then just do the ones that look cool to you. It"s important that a player likes their character.
+  </p>
+  <h3>How to Grow</h3>
+  <p>
+    Once you have figured out the basics - the controls, what characters look cool, and how the game feels - you have likely picked out a couple characters that you want to learn properly. We need to ask ourself: How can I track my growth? My answer is to make yourself a checklist, and update it when you tick things off the list, or when your priorities change. For example:
+  </p>
+  <ol>
+    <li>Do I Understand System Mechanics?</li>
+    <li>Have I learned and can do my special move inputs?</li>
+    <li>Do I know what to do in neutral?</li>
+    <li>Can I play defense?</li>
+    <li>Can I do consistent combos?</li>
+    <li>Do I know what to do After a combo?</li>
+  </ol>
+  <p>
+    Being able to keep track of your growth is important, but also an easy trap to fall into. Winning and losing should not be your primary metric for measuring growth. Winning and losing is a bad way to track your progress because of a few reasons. Let"s say that you play against your friend every day. If you win, are you learning the matchup against the character, the matchup against the player, or growing all around? If you lose, are you getting worse, or are they just getting better faster than you? As you can guess, measuring your progress based off of winrate just leads to a bunch of unhelpful questions that don"t actually represent where you are growing and failing to grow.
+  </p>
+  <p>
+    Instead, try setting goals for youself that can be measured and tracked, similar to laps in a run around a track. Keep in mind that growth is not a race but a journey. So obviously let"s set our first goal as point number 1 in the list above. If you are playing 
+    <a href="https://www.dustloop.com/wiki/index.php?title=Guilty_Gear_Xrd_REV_2">
+      Guilty Gear Xrd
+    </a> you should learn what 
+    <span
+      class="features simptip-position-top simptip-smooth simptip-multiline simptip-movable"
+      data-tooltip="A special type of blocking that negates chip damage, increases blockstun, and pushes the opponent back further than usual. This type of blocking comes at the cost of tension."
+    >
+      FD
+    </span>
+    and 
+    <span
+      class="features simptip-position-top simptip-smooth simptip-multiline simptip-movable"
+      data-tooltip="A special type of blocking that improves frame advantage, increases R.I.S.C gauge, and pushes the opponent back less than usual."
+    >
+      IB
+    </span>
+    are and when to use them. Adapt this point for whatever game you are playing. Doing this step will automatically help you out with step number 4. Essentially just build yourself a list of things to learn, and work your way through them. You will be able to see your growth clearly and know you are improving. Another benefit of having a list is that it forces you to research what to learn for yourself and have specific goals to ask for help with which cuts down on how much experienced players can flood you with information. Every person"s list will look a little different, but the one I put above is generally useful for most games.
+  </p>
+  <h3>The Story of 3 Gamers</h3>
+  <p>Ben, Liam, and Ryou are learning to play 
+    <a href="https://www.dustloop.com/wiki/index.php?title=GBVS">Granblue Fantasy Versus</a>.
+  </p>
+  <p>
+    Liam goes into the training mode and spends a few hours with the goal of discovering combos for 
+    <span class="characterIcon">
+      <img 
+        src="assets/img/GBVS_Character_Icons/Narmaya.webp" 
+        loading="lazy" 
+        alt="Narmaya Icon"
+      >
+      <a href="https://www.dustloop.com/wiki/index.php?title=GBVS/Narmaya">
+        Narmaya
+      </a>
+    </span>.
+    In this time Liam find 2 cool combos that do good damage and that he likes. Because he discovered these combos for himself, he has an understanding of their limitations and how you can get into these combos and what he gets out of them.
+  </p>
+  <p>
+    Ben has a few characters he wants to play, say
+    <span class="characterIcon">
+      <img 
+        src="assets/img/GBVS_Character_Icons/Zeta.webp" 
+        loading="lazy" 
+        alt="Zeta Icon"
+      >
+      <a href="https://www.dustloop.com/wiki/index.php?title=GBVS/Zeta">
+        Zeta
+      </a>
+    </span>
+    , 
+    <span class="characterIcon">
+      <img 
+        src="assets/img/GBVS_Character_Icons/Lancelot.webp" 
+        loading="lazy" 
+        alt="Lancelot Icon"
+      >
+      <a href="https://www.dustloop.com/wiki/index.php?title=GBVS/Lancelot">
+        Lancelot
+      </a>
+    </span>
+    , and 
+    <span class="characterIcon">
+      <img 
+        src="assets/img/GBVS_Character_Icons/Percival.webp" 
+        loading="lazy" 
+        alt="Percival Icon"
+      >
+      <a href="https://www.dustloop.com/wiki/index.php?title=GBVS/Percival">
+        Percival
+      </a>
+    </span>. Ben plays through story mode with these 3 characters and then hops into an online lobby and plays with whoever sits down at the cab with. Ben gets clobbered by some experienced players, and Ben destroys some beginners. Through this Ben is unknowingly taught what he can and cannot get away with against players of higher and lower skill than him.
+  </p>
+  <p>
+    Ryou looks up a tier list and finds out who is the best character in the game, let"s say 
+    <span class="characterIcon">
+      <img 
+        src="assets/img/GBVS_Character_Icons/Gran.webp" 
+        loading="lazy" 
+        alt="Gran Icon"
+      >
+      <a href="https://www.dustloop.com/wiki/index.php?title=GBVS/Gran">
+        Gran
+      </a>
+    </span>
+    . Ryou looks up a guide written by pro player KnucklesCoyote. He focuses on the parts of the guide that say that EX Boot is super strong and learns a big combo. Ryou drills these into his head so he can do them off of muscle memory.
+  </p>
+  <p>
+    All 3 of these players have learned a part of the game, but none of them have gained the full picture yet. Let"s break it down. Liam gained the most familiarity with his character, but the combos he came up with are likely not the best and he has gained nothing for actually fighting against another player. Ben learned through trial-by-fire how to play his characters in a real environment, how neutral and defense work, and how the inter-player interactions work, but Ben has not learned any good combos or tech. Ryou learned the best combos and best tech for his character, but without the familiarity with his character that Liam gained by labbing for himself. Ryou also did not gain any knowledge for the actual match because he only focused on the things that are intended for intermediate to advanced players, and he likely won"t be able to get into those combos due to a lack of practice in neutral and defense.
+  </p>
+  <p>This is why you need all 3 types of practice.</p>
+</div>
+<!-- </div> -->
+<!-- <script src="js/index.js"></script> -->
+
+<footer>
+  <h3 class="center">
+    This is a test page used to help me learn modern web development standards.
+  </h3>
+  <div class="genericFlexContainer">
+    <div>
+      <h6>Included Technologies:</h6>
+      <ul>
+        <li>SASS</li>
+        <li><a href="http://arashm.net/lab/simptip/">simtip</a></li>
+        <li><a href="https://vuejs.org/">Vuejs</a></li>
+        <li>npm</li>
+      </ul>
+    </div>
+    <div>
+      <h6>Who I am:</h6>
+      <p>
+        Cody "Tarkus" Lee<br>
+        Software Engineer<br>
+        Dustloop Front End Developer
+      </p>
+    </div>
+  </div>
+
+</footer>
+</body>
+</html>

@@ -1,0 +1,303 @@
+@import 'variables';
+// https://github.com/twbs/rfs#usage
+@import "../node_modules/rfs/scss";
+
+*,
+*:focus,
+*:hover {
+  outline: none;
+}
+
+html {
+  height: 100%;
+  font-size: 1em;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $color-white;
+  font-size: $font-size-medium;
+  font-family: $font-stack;
+  line-height: $line-height-longform;
+  color: $color-primary;
+  margin: 0;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* [---------------------------------] Start General Elements [---------------------------------] */
+
+.mainContent {
+  // max-width: 1140px;
+  max-width: 960px;
+  margin: 0 auto;
+  min-height: 100%;
+  padding: 0 5rem;
+}
+
+footer {
+  margin-top: auto;
+  background: $color-N40;
+  padding: 1rem 1rem 1rem 1rem;
+  margin-top: 52px;
+}
+
+.titleImg {
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.characterIcon {
+  display: inline-grid;
+  grid-template-columns: $line-height-longform 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0.25em;
+  grid-row-gap: 0px;
+  height: $line-height-longform;
+  position: relative;
+  top: 0.5em;
+  img {
+    height: 100%;
+  }
+}
+
+.genericFlexContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-content: stretch;
+  align-items: flex-start;
+}
+
+/* [------------------------------------] Start Navigation [------------------------------------] */
+
+.navbar {
+  background: #0069B6;
+  color: #FFF;
+  height: 45px;
+  padding-left: 18px;
+  border-radius: 0px;
+  transition-timing-function: ease;
+}
+.navbar ul, .navbar li {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none
+}
+.navbar ul {
+  width: 100%;
+}
+.navbar li {
+  float: left;
+  display: inline;
+  position: relative;
+}
+.navbar a {
+  display: block;
+  line-height: 45px;
+  padding: 0 14px;
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 16px;
+}
+.navbar a.dropdown-arrow:after {
+  content: "\25BE";
+  margin-left: 5px;
+}
+.navbar li a:hover {
+  color: #172B4D;
+  background: #FFFFFF;
+}
+.navbar input {
+  display: none;
+  margin: 0;
+  padding: 0;
+  height: 45px;
+  width: 100%;
+  opacity: 0;
+  cursor: pointer
+}
+.navbar label {
+  display: none;
+  line-height: 45px;
+  text-align: center;
+  position: absolute;
+  left: 35px
+}
+.navbar label:before {
+  font-size: 1.6em;
+  content: "\2261"; 
+  margin-left: 20px;
+}
+.navbar ul.sub-menus{
+  height: auto;
+  overflow: hidden;
+  width: 170px;
+  background: #474747;
+  position: absolute;
+  z-index: 99;
+  display: none;
+}
+.navbar ul.sub-menus li {
+  display: block;
+  width: 100%;
+}
+.navbar ul.sub-menus a {
+  color: #FFFFFF;
+  font-size: 16px;
+}
+.navbar li:hover ul.sub-menus {
+  display: block;
+}
+.navbar ul.sub-menus a:hover{
+  background: #6B778C;
+  color: #FFFFFF;
+}
+@media screen and (max-width: 800px){
+  .navbar {position:relative}
+  .navbar ul {background:#111;position:absolute;top:100%;right:0;left:0;z-index:3;height:auto;display:none}
+  .navbar ul.sub-menus {width:100%;position:static;}
+  .navbar ul.sub-menus a {padding-left:30px;}
+  .navbar li {display:block;float:none;width:auto;}
+  .navbar input, .navbar label {position:absolute;top:0;left:0;display:block}
+  .navbar input {z-index:4}
+  .navbar input:checked + label {color:white}
+  .navbar input:checked + label:before {content:"\00d7"}
+  .navbar input:checked ~ ul {display:block}
+}
+
+/* [-------------------------------------] End Navigation [-------------------------------------] */
+
+/* [---------------------------------] Start General Elements [---------------------------------] */
+
+/* [------------------------------------] Start Typography [------------------------------------] */
+
+a,
+a:visited {
+  color: $color-link-blue;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.strong {
+  font-weight: $font-weight-heavy;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.small {
+  font-size: 11px;
+}
+
+.capslock {
+  text-transform: capitalize;
+}
+
+.center {
+  text-align: center;
+}
+
+.subtitle {
+  font-size: $font-size-large;
+  color: $color-light-grey;
+  font-weight: $font-weight-medium;
+  line-height: $font-size-large;
+}
+
+blockquote {
+  color: $color-light-grey;
+  border-left: 1px solid $color-N40;
+  padding: 10px 20px;
+}
+
+.author {
+  text-align: right;
+  font-style: italic;
+}
+
+ol {
+  display: block;
+  list-style-type: decimal;
+  line-height: $line-height-insert;
+}
+
+ul {
+  line-height: $line-height-insert;
+}
+
+/* [-------------------------------------] End Typography [-------------------------------------] */
+
+/* [----------------------------------] Start Header Sytles  [----------------------------------] */
+
+.title { // Oversized screen titles
+  font-size: 2.1875rem;
+  font-weight: $font-weight-medium; // medium
+  letter-spacing: -0.01em;
+  line-height: 40px;
+  margin-top: 52px;
+}
+
+h1 { // Main Page Title (use once per page)
+  font-size: 1.5rem;
+  font-weight: $font-weight-medium;
+  letter-spacing: -0.01em;
+  line-height: 28px;
+  margin-top: 40px;
+}
+
+h2 { // Top level headers
+  font-size: $font-size-very-large;
+  font-weight: 600; // semibold
+  letter-spacing: -0.01em;
+  line-height: 32px;
+  margin-top: 48px;
+}
+
+h3 { // Headings that identify key features
+  font-size: $font-size-large;
+  font-weight: $font-weight-medium; // medium
+  letter-spacing: -0.008em;
+  line-height: 24px;
+  margin-top: 36px;
+}
+
+h4 { // Sub Section Headers
+  font-size: 1rem;
+  font-weight: 600; // semibold
+  letter-spacing: -0.006em;
+  line-height: 24px;
+  margin-top: 32px;
+}
+
+h5 { // Deep Headings and important information highlighting
+  font-size: $font-size-medium;
+  font-weight: 600; // semibold
+  letter-spacing: -0.003em;
+  line-height: $line-height-insert;
+  margin-top: 24px;
+}
+
+h6 { // List Heading
+  font-size: $font-size-small;
+  font-weight: 600; // semibold
+  letter-spacing: 0;
+  line-height: 1rem;
+  margin-top: 20px;
+  text-transform: uppercase;
+}
+
+/* [-----------------------------------] End Header Sytles  [-----------------------------------] */
