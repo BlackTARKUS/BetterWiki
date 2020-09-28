@@ -23,20 +23,15 @@ $tooltipColor: #474747;
 //tooltip's default text color
 $tooltipTextColor: #FFFFFF;
 
+//Material design moderate shadow
+$moderate-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+
 //diverse color variables
 $c-success: #62c462;
 $c-info:    #5bc0de;
 $c-danger:  #e74c3c;
 $c-warning: #e67e22;
 $color-primary: #172B4D; // squid ink Black
-
-
-// ******************************** Mixins *****************************/
-// add a dashed underline to tooltip parent
-.features {
-  border-bottom: 1px dashed $color-primary;
-}
-
 
 // ******************************** Mixins *****************************/
 //generate custom colors for tooltip's box and the texts. we use it without argumant for default color
@@ -127,6 +122,7 @@ $coloring:                true!default;
 [data-tooltip] {  
   position: relative;
   display: inline-block;
+  border-bottom: 1px dashed $color-primary;
   @include box-sizing(content-box);
   &:before, &:after {
     position: absolute;
@@ -152,6 +148,7 @@ $coloring:                true!default;
     line-height: $tooltipHeight/2;
     content: attr(data-tooltip);
     white-space: nowrap;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   }
   @include applyColor();
   &:hover, &:focus{

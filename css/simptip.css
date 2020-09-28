@@ -1,10 +1,8 @@
-.features {
-  border-bottom: 1px dashed #172B4D; }
-
 /********************************* Core ******************************/
 [data-tooltip] {
   position: relative;
   display: inline-block;
+  border-bottom: 1px dashed #172B4D;
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box; }
@@ -28,7 +26,8 @@
     font-size: 0.75rem;
     line-height: 11px;
     content: attr(data-tooltip);
-    white-space: nowrap; }
+    white-space: nowrap;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
   [data-tooltip].simptip-position-top:before {
     border-top-color: #474747; }
   [data-tooltip].simptip-position-top:after {

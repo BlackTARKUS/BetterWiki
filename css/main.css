@@ -271,4 +271,57 @@ h6 {
 
 /* [-------------------------------------] End Typography [-------------------------------------] */
 /* [----------------------------------] Start Card Sytles  [----------------------------------] */
+.card-container {
+  gap: 2rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  padding: 2rem 0; }
+
+.card {
+  border-radius: 4px;
+  max-width: 50em;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  display: grid;
+  grid-template-areas: "." "." "." "."; }
+
+.card-title {
+  padding: 0.5em 0;
+  font-weight: 900;
+  font-size: 1.25rem;
+  text-align: center;
+  border-bottom: 2px solid #DFE1E6; }
+
+.card-img {
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  object-position: center; }
+
+.card-data {
+  text-align: center;
+  padding: 0.5em 0;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-areas: ". . . . . . ." ". . . . . . ."; }
+  .card-data .Startup {
+    color: #36B37E; }
+  .card-data .Recovery {
+    color: #0069B6; }
+  .card-data .Active {
+    color: #FF5D5D; }
+
+.card-data div:nth-child(-n+7) {
+  font-weight: 900; }
+
+.card-data div:nth-last-child(-n+7) {
+  font-size: 1.25rem;
+  padding-bottom: 0.5em;
+  border-bottom: 2px solid #DFE1E6; }
+
+.card-description {
+  padding: 1.5rem 1rem; }
+
 /* [-----------------------------------] End Card Sytles  [-----------------------------------] */
