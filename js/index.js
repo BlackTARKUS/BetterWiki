@@ -84,15 +84,15 @@ Vue.component('move-data-item', {
       <svg v-if="(move.startup + move.active + move.recovery) < 50" class="card-chart">
         <rect 
           v-for="(n, index) in (move.startup - 1)" 
-          width="12" height="12" fill="green" v-bind:x="(n*14)-8" y="0"
+          width="12" height="12" fill="#36B37E" v-bind:x="(n*14)-8" y="0"
         ></rect>
         <rect 
           v-for="(n, index) in move.active" 
-          width="12" height="12" fill="red" v-bind:x="(n*14)+((move.startup-1)*14)-8" y="0"
+          width="12" height="12" fill="#FF5D5D" v-bind:x="(n*14)+((move.startup-1)*14)-8" y="0"
         ></rect>
         <rect 
           v-for="(n, index) in move.recovery" 
-          width="12" height="12" fill="blue" v-bind:x="(n*14)+(move.active*14)+((move.startup-1)*14)-8" y="0"
+          width="12" height="12" fill="#0069B6" v-bind:x="(n*14)+(move.active*14)+((move.startup-1)*14)-8" y="0"
         ></rect>
       </svg>
       <div v-else class="card-line">Frame data too long to draw!</div>
