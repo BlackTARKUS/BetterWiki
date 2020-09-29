@@ -85,6 +85,26 @@ Vue.component('move-data-item', {
     </div>`
 })
 
+Vue.component('character-icon', {
+  props: {
+    character: {
+      type: String,
+      required: true
+    }
+  },
+  template: 
+    `<span class="characterIcon" v-bind:character="character">
+      <img 
+        v-bind:src="'assets/img/GBVS_Character_Icons/' + character + '.webp'" 
+        loading="lazy" 
+        v-bind:alt="character + ' Icon'"
+      >
+      <a v-bind:href="'https://www.dustloop.com/wiki/index.php?title=GBVS/' + character">
+        {{ character }}
+      </a>
+    </span>`
+})
+
 var vm = new Vue({
   el: '#app',
   data: {
