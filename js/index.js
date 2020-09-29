@@ -81,6 +81,21 @@ Vue.component('move-data-item', {
         <div>{{ move.onBlock }}</div>
         <div>{{ move.onHit }}</div>
       </div>
+      <svg v-if="(move.startup + move.active + move.recovery) < 50" class="card-chart">
+        <rect 
+          v-for="(n, index) in (move.startup - 1)" 
+          width="12" height="12" fill="green" v-bind:x="(n*14)-8" y="0"
+        ></rect>
+        <rect 
+          v-for="(n, index) in move.active" 
+          width="12" height="12" fill="red" v-bind:x="(n*14)+((move.startup-1)*14)-8" y="0"
+        ></rect>
+        <rect 
+          v-for="(n, index) in move.recovery" 
+          width="12" height="12" fill="blue" v-bind:x="(n*14)+(move.active*14)+((move.startup-1)*14)-8" y="0"
+        ></rect>
+      </svg>
+      <div v-else class="card-line">Frame data too long to draw!</div>
       <div class="card-description">{{ move.description }}</div>
     </div>`
 })
@@ -135,6 +150,21 @@ var vm = new Vue({
         damage: 700,
         onBlock: '-6',
         onHit: '-2',
+        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, officiis.
+          Corporis hic doloremque quis, possimus sed itaque voluptates, earum culpa nesciunt 
+          voluptas harum! Exercitationem, aut? Debitis laudantium dignissimos sint doloremque!`
+      },
+      {
+        id: 2,
+        name: 'Overdrive Surge',
+        input: '214M',
+        startup: 16,
+        active: 13,
+        recovery: 29,
+        guard: 'high',
+        damage: 1200,
+        onBlock: '-10',
+        onHit: 'KD',
         description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, officiis.
           Corporis hic doloremque quis, possimus sed itaque voluptates, earum culpa nesciunt 
           voluptas harum! Exercitationem, aut? Debitis laudantium dignissimos sint doloremque!`

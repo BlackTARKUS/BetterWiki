@@ -285,7 +285,7 @@ h6 {
   max-width: 50em;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   display: grid;
-  grid-template-areas: "." "." "." "."; }
+  grid-template-areas: "." "." "." "." "."; }
 
 .card-title {
   padding: 0.5em 0;
@@ -319,6 +319,18 @@ h6 {
 .card-data div:nth-last-child(-n+7) {
   font-size: 1.25rem;
   padding-bottom: 0.5em;
+  border-bottom: 2px solid #DFE1E6; }
+
+.card-chart {
+  height: 16px;
+  width: 100%;
+  padding-bottom: 4px;
+  border-bottom: 2px solid #DFE1E6; }
+
+.card-line {
+  height: 16px;
+  width: calc(100%-8px);
+  padding: 0 8px 1em 8px;
   border-bottom: 2px solid #DFE1E6; }
 
 .card-description {
