@@ -8,7 +8,7 @@
   <!-- https://github.com/arashmanteghi/simptip/ -->
   <link rel="stylesheet" type="text/css" href="css/simptip.css" media="all"/>
   <!-- https://vuejs.org/v2/guide/ -->
-  <!-- <script src="js/vue.js"></script> -->
+  <script src="js/vue.js"></script>
   <title>Fighting Game Character Viewer</title>
 </head>
 <body>
@@ -37,179 +37,16 @@
 </script>
 
 
-<!-- <div id="app"> -->
-<div class="mainContent">
+<div id="app" class="mainContent">
   <div class="card-container">
-  <div id="card1" class="card">
-    <div class="card-title">
-      <div class="move-title">Overdrive Surge</div>
-      <div class="move-input">214L</div>
-    </div>
-    <img src="assets/img/GBVS_Move_Images/GBVS_Gran_OverdriveSurgeL.webp" class="card-img">
-    <div class="card-data">
-      <div class="Startup">
-        <span
-          class="features simptip-position-top simptip-smooth simptip-multiline simptip-movable"
-          data-tooltip="The time, measured in frames, which it takes for a move to become able to
-          strike the opponent. Startup includes the frame on which the move becomes active."
-        >
-          Startup
-        </span>
-      </div>
-      <div class="Active">
-        <span
-          class="features simptip-position-top simptip-smooth simptip-multiline simptip-movable"
-          data-tooltip="The  duration of time, measured in frames, during which a move is able to
-          strike the opponent."
-        >
-          Active
-        </span>
-      </div>
-      <div class="Recovery">
-        <span
-          class="features simptip-position-top simptip-smooth simptip-multiline simptip-movable"
-          data-tooltip="The time, measured in frames, following a move's active frames during which
-          the user's actions are limited, either partially or entirely."
-        >
-          Recovery
-        </span>
-      </div>
-      <div>
-        <span
-          class="features simptip-position-top simptip-smooth simptip-multiline simptip-movable"
-          data-tooltip="The type of guard which must be used to avoid getting hit by this move."
-        >
-          Guard
-        </span>
-      </div>
-      <div>
-        <span
-          class="features simptip-position-top simptip-smooth simptip-multiline simptip-movable"
-          data-tooltip="The value by which the opponent's health will be reduced, ignoring 
-          any reductions, when struck by this move."
-        >
-          Damage
-        </span>
-      </div>
-      <div class="On-Block">
-        <span
-          class="features simptip-position-top simptip-smooth simptip-multiline simptip-movable"
-          data-tooltip="The amount of time, measured in frames, during which the attacker is able to
-          act before the opponent after the opponent succesfully guards against this attack. 
-          Negative values indicate the player who guarded can act first."
-        >
-          On-Block
-        </span>
-      </div>
-      <div class="On-Hit">
-        <span
-          class="features simptip-position-top simptip-smooth simptip-multiline simptip-movable"
-          data-tooltip="The amount of time, measured in frames, during which the attacker is able to
-          act before the opponent after succesfully striking the opponent with this attack. Negative
-          values indicate the player who was struck can act first."
-        >
-          On-Hit
-        </span>
-      </div>
-      <div>13</div>
-      <div>2</div>
-      <div>19</div>
-      <div>High</div>
-      <div>700</div>
-      <div>-6</div>
-      <div>-2</div>
-    </div>
-    <div class="card-description">
-      Lorem ipsum dolor sit amet consectetur adipisicing, elit. Non odit odio, esse quos! Praesentium, repudiandae, quam aut necessitatibus ad veritatis! Pariatur labore, quaerat doloribus vitae, aut fugiat atque perspiciatis mollitia.
-    </div>
-  </div>
-
-  <div id="card2" class="card">
-    <div class="card-title">
-      <div class="move-input">f.L</div>
-    </div>
-    <img src="assets/img/GBVS_Move_Images/GBVS_Gran_fL.webp" class="card-img">
-    <div class="card-data">
-      <div class="Startup">
-        <span
-          class="features simptip-position-top simptip-smooth simptip-multiline simptip-movable"
-          data-tooltip="The time, measured in frames, which it takes for a move to become able to
-          strike the opponent. Startup includes the frame on which the move becomes active."
-        >
-          Startup
-        </span>
-      </div>
-      <div class="Active">
-        <span
-          class="features simptip-position-top simptip-smooth simptip-multiline simptip-movable"
-          data-tooltip="The  duration of time, measured in frames, during which a move is able to
-          strike the opponent."
-        >
-          Active
-        </span>
-      </div>
-      <div class="Recovery">
-        <span
-          class="features simptip-position-top simptip-smooth simptip-multiline simptip-movable"
-          data-tooltip="The time, measured in frames, following a move's active frames during which
-          the user's actions are limited, either partially or entirely."
-        >
-          Recovery
-        </span>
-      </div>
-      <div>
-        <span
-          class="features simptip-position-top simptip-smooth simptip-multiline simptip-movable"
-          data-tooltip="The type of guard which must be used to avoid getting hit by this move."
-        >
-          Guard
-        </span>
-      </div>
-      <div>
-        <span
-          class="features simptip-position-top simptip-smooth simptip-multiline simptip-movable"
-          data-tooltip="The value by which the opponent's health will be reduced, ignoring 
-          any reductions, when struck by this move."
-        >
-          Damage
-        </span>
-      </div>
-      <div class="On-Block">
-        <span
-          class="features simptip-position-top simptip-smooth simptip-multiline simptip-movable"
-          data-tooltip="The amount of time, measured in frames, during which the attacker is able to
-          act before the opponent after the opponent succesfully guards against this attack. 
-          Negative values indicate the player who guarded can act first."
-        >
-          On-Block
-        </span>
-      </div>
-      <div class="On-Hit">
-        <span
-          class="features simptip-position-top simptip-smooth simptip-multiline simptip-movable"
-          data-tooltip="The amount of time, measured in frames, during which the attacker is able to
-          act before the opponent after succesfully striking the opponent with this attack. Negative
-          values indicate the player who was struck can act first."
-        >
-          On-Hit
-        </span>
-      </div>
-      <div>6</div>
-      <div>3</div>
-      <div>13</div>
-      <div>High</div>
-      <div>700</div>
-      <div>-3</div>
-      <div>+1</div>
-    </div>
-    <div class="card-description">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas inventore assumenda amet labore deleniti in nemo pariatur modi praesentium blanditiis impedit dignissimos similique quaerat voluptates fuga iusto, voluptatum optio atque?
-    </div>
-  </div>
+    <move-data-item 
+      v-for="move in moveList"
+      v-bind:move="move"
+      v-bind:key="move.id"
+    ></move-data-item>
   </div>
 </div>
-<!-- </div> -->
-<!-- <script src="js/index.js"></script> -->
+<script src="js/index.js"></script>
 
 <footer>
   <h3 class="center">
