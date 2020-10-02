@@ -314,7 +314,7 @@ h6 {
     color: #FF5D5D; }
 
 .card-data div:nth-child(-n+7) {
-  font-weight: 900; }
+  font-weight: 700; }
 
 .card-data div:nth-last-child(-n+7) {
   font-size: 1.25rem;
@@ -327,9 +327,6 @@ h6 {
   max-width: 960px;
   overflow-x: scroll;
   overflow-y: hidden; }
-
-.card-chart {
-  padding-bottom: 4px; }
 
 .card-line {
   height: 16px;

@@ -2,7 +2,10 @@ Vue.component('move-data-item', {
   props: ['move'],
   template: 
     `<div class="card">
-      <div class="card-title">{{ move.name }}</div>
+      <div class="card-title">
+        {{ move.name }}
+        <div class="subtitle" v-if="move.isSpecial == 'yes'">{{ move.input }}</div>
+      </div>
       <img 
         v-bind:src="'assets/img/GBVS_Move_Images/GBVS_Gran_' + move.input + '.webp'"
         class="card-img"
@@ -83,7 +86,6 @@ Vue.component('move-data-item', {
       </div>
       <div class="card-chart-container">
         <svg
-          class="card-chart" 
           xmlns="http://www.w3.org/2000/svg" 
           :style="{ width: (move.startup + move.active + move.recovery) * 14 + 8 + 'px'}"
         >
@@ -132,7 +134,7 @@ var vm = new Vue({
     moveList: [
       {
         id: 0,
-        name: 'fL',
+        name: 'f.L',
         input: 'fL',
         startup: 6,
         active: 3,
@@ -141,13 +143,14 @@ var vm = new Vue({
         damage: 700,
         onBlock: '-3',
         onHit: '+1',
+        isSpecial: 'no',
         description: `Lorem ipsum dolor, sit, amet consectetur adipisicing elit. Iure dolores harum
           exercitationem quasi quas asperiores unde maxime libero quod officia, accusamus adipisci 
           voluptatibus consectetur placeat, saepe eius ducimus corporis nobis.`
       },
       {
         id: 1,
-        name: 'Overdrive Surge',
+        name: 'Overdrive Surge L',
         input: '214L',
         startup: 13,
         active: 2,
@@ -156,13 +159,14 @@ var vm = new Vue({
         damage: 700,
         onBlock: '-6',
         onHit: '-2',
+        isSpecial: 'yes',
         description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, officiis.
           Corporis hic doloremque quis, possimus sed itaque voluptates, earum culpa nesciunt 
           voluptas harum! Exercitationem, aut? Debitis laudantium dignissimos sint doloremque!`
       },
       {
         id: 2,
-        name: 'Overdrive Surge',
+        name: 'Overdrive Surge M',
         input: '214M',
         startup: 16,
         active: 13,
@@ -171,6 +175,7 @@ var vm = new Vue({
         damage: 1200,
         onBlock: '-10',
         onHit: 'KD',
+        isSpecial: 'yes',
         description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, officiis.
           Corporis hic doloremque quis, possimus sed itaque voluptates, earum culpa nesciunt 
           voluptas harum! Exercitationem, aut? Debitis laudantium dignissimos sint doloremque!`

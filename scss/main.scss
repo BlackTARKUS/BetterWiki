@@ -371,7 +371,7 @@ h6 { // List Heading
 }
 
 .card-data div:nth-child(-n+7) { // first row (cells 0 through 7)
-  font-weight: 900;
+  font-weight: 700;
 }
 
 .card-data div:nth-last-child(-n+7) { // last row (cells n  through n-7)
@@ -388,9 +388,6 @@ h6 { // List Heading
   overflow-x: scroll;
   overflow-y: hidden;
 }
-.card-chart {
-  padding-bottom: 4px;
-}
 
 .card-line {
   height: 16px;
@@ -402,5 +399,16 @@ h6 { // List Heading
 .card-description {
   padding: $line-height-longform 1rem;
 }
+
+//I'll figure this out later
+// .startup-area:hover {
+
+// }
+// .active-area:hover {
+  
+// }
+// .recovery-area:hover {
+  
+// }
 
 /* [------------------------------------] End Card Sytles  [------------------------------------] */
