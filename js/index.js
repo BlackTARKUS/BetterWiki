@@ -160,9 +160,11 @@ var vm = new Vue({
         onBlock: '-6',
         onHit: '-2',
         isSpecial: 'yes',
-        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, officiis.
-          Corporis hic doloremque quis, possimus sed itaque voluptates, earum culpa nesciunt 
-          voluptas harum! Exercitationem, aut? Debitis laudantium dignissimos sint doloremque!`
+        description: `Gran dashes forward with a slash. Overdrive Surge L is the safest variant of
+        Overdrive Surge at close range. This mvoe can cancel into Overdrive Surge M on hit or block.
+        On hit, 214L > 214M serves as his standard meterless combo ender. On block this move can be
+        used to test your opponent's willingness to mash after 214L lest they risk a counter hit 
+        214M.`
       },
       {
         id: 2,
@@ -176,9 +178,12 @@ var vm = new Vue({
         onBlock: '-10',
         onHit: 'KD',
         isSpecial: 'yes',
-        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, officiis.
-          Corporis hic doloremque quis, possimus sed itaque voluptates, earum culpa nesciunt 
-          voluptas harum! Exercitationem, aut? Debitis laudantium dignissimos sint doloremque!`
+        description: `Gran dashes forward with his foot out. Overdrive Surge M covers a lot of 
+          horizontal space in front of the user. At point blank, Gran is punishable after hitting
+          the opponent with this move. At farther distances, however, it becomes safe or even
+          advantageous due to the frame advantage gained by hitting with the latest active frames of
+          the attack. On counter hit Overdrive Surge M causes a wall bounce allowing for additional 
+          follows up.`
       }
     ]
   }
