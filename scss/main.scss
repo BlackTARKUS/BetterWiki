@@ -309,7 +309,7 @@ h6 { // List Heading
 
 /* [-------------------------------------] End Typography [-------------------------------------] */
 
-/* [----------------------------------] Start Card Sytles  [----------------------------------] */
+/* [-----------------------------------] Start Card Sytles  [-----------------------------------] */
 
 .card-container {
   gap: 2rem;
@@ -324,7 +324,7 @@ h6 { // List Heading
 .card {
   // background: linear-gradient(to bottom left, #EF8D9C 40%, #FFC39E 100%);
   border-radius: 4px;
-  max-width: 50em;
+  max-width: 960px;
   box-shadow: $moderate-shadow;
   display: grid;
   grid-template-areas:
@@ -380,11 +380,16 @@ h6 { // List Heading
   border-bottom: 2px solid $color-N40;
 }
 
-.card-chart {
-  height: 16px;
+
+.card-chart-container {
+  height: 30px;
   width: 100%;
+  max-width: 960px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+.card-chart {
   padding-bottom: 4px;
-  border-bottom: 2px solid $color-N40;
 }
 
 .card-line {
@@ -398,4 +403,4 @@ h6 { // List Heading
   padding: $line-height-longform 1rem;
 }
 
-/* [-----------------------------------] End Card Sytles  [-----------------------------------] */
+/* [------------------------------------] End Card Sytles  [------------------------------------] */

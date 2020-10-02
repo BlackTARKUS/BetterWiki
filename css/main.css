@@ -270,7 +270,7 @@ h6 {
   text-transform: uppercase; }
 
 /* [-------------------------------------] End Typography [-------------------------------------] */
-/* [----------------------------------] Start Card Sytles  [----------------------------------] */
+/* [-----------------------------------] Start Card Sytles  [-----------------------------------] */
 .card-container {
   gap: 2rem;
   width: 100%;
@@ -282,7 +282,7 @@ h6 {
 
 .card {
   border-radius: 4px;
-  max-width: 50em;
+  max-width: 960px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   display: grid;
   grid-template-areas: "." "." "." "." "."; }
@@ -321,11 +321,15 @@ h6 {
   padding-bottom: 0.5em;
   border-bottom: 2px solid #DFE1E6; }
 
-.card-chart {
-  height: 16px;
+.card-chart-container {
+  height: 30px;
   width: 100%;
-  padding-bottom: 4px;
-  border-bottom: 2px solid #DFE1E6; }
+  max-width: 960px;
+  overflow-x: scroll;
+  overflow-y: hidden; }
+
+.card-chart {
+  padding-bottom: 4px; }
 
 .card-line {
   height: 16px;
@@ -336,4 +340,4 @@ h6 {
 .card-description {
   padding: 1.5rem 1rem; }
 
-/* [-----------------------------------] End Card Sytles  [-----------------------------------] */
+/* [------------------------------------] End Card Sytles  [------------------------------------] */
