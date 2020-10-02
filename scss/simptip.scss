@@ -145,6 +145,7 @@ $coloring:                true!default;
     height: $tooltipHeight;
     padding: $tooltipHeight/2 $tooltipHeight/2 0 $tooltipHeight/2;
     font-size: $font-size-small;
+    font-weight: 400;
     line-height: $tooltipHeight/2;
     content: attr(data-tooltip);
     white-space: nowrap;
