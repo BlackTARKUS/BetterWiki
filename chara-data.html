@@ -33,22 +33,16 @@
 </div>
 <script type="text/javascript" src="js/mobile.js"></script>
 
-<div class="mainContent blog-container push_down">
-  <div class="center">
-    <h2 class="title">Welcome to BetterWiki</h2>
-    <p class="subtitle italic">Not a replacement for Dustloop</p>
-    <br>
-    <p>Welcome to my development sandbox.</p>
-    <p>Here I practice and prototype ideas that I have for my projects.</p>
-    <br>
-    <p>You can contact me on <a href="https://discord.com/" target="_blank">Discord</a>
-      <img style="position: relative; top: 0.75em; display: inline-block;"src="assets/img/dev_icon.webp" height="32px"></img>
-      at Tarkus Lee #8532
-    </p>
-    <br>
-    <p>To see the cool stuff I am working on, check out the links in the top navigation bar.</p>
+<div id="app" class="mainContent">
+  <div class="card-container">
+    <move-data-item 
+      v-for="move in moveList"
+      v-bind:move="move"
+      v-bind:key="move.id"
+    ></move-data-item>
   </div>
 </div>
+<script src="js/index.js"></script>
 
 <footer>
   <h3 class="center">
