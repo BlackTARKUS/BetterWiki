@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title>BetterWiki</title>
+  <title>Fighting Game Primer</title>
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -26,29 +26,15 @@
       <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>
   </nav>
-  
-  <div class="section no-pad-bot" id="index-banner" style="height: 75vh;">
-    <div class="container">
-      <br><br>
-      <h1 class="header center red-text">Welcome to BetterWiki</h1>
-      <div class="row center">
-        <h5 class="header col s12 light">Not a replacement for Dustloop</h5>
-      </div>
-      <div class="row center">
-        <div class="icon-block">
-          <h2 class="center light-blue-text"></h2>
-          <div class="col s6 offset-s3">
-            <p class="light ">This is a sandbox in which I prototype projects for the web. To check out what I'm up to, select a project in the navbar.
-              If you need me, reach out on <a href="https://discord.com/" target="_Blank">Discord</a> at <img class="characterIcon" src="assets/img/dev_icon.webp"> Tarkus Lee #8532
-            </p>
-          </div>
-          
-        </div>
-      </div>
-      <br><br>
 
-    </div>
+  <div class="container" id="app">
+    <move-data-item 
+      v-for="move in moveList"
+      v-bind:move="move"
+      v-bind:key="move.id"
+    ></move-data-item>
   </div>
+  <br><br>
 
   <footer class="page-footer grey lighten-4">
     <div class="container">
@@ -83,9 +69,16 @@
 
 
   <!--  Scripts-->
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
+  <script src="js/index.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('.tooltipped').tooltip({inDuration: 150, outDuration: 100, transitionMovement: 8, margin: 0});
+    });
+  </script>
 
   </body>
 </html>
