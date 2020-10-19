@@ -14,7 +14,7 @@ Vue.component('move-data-item', {
           <video v-if="move.versions[move.activeVersion].hasVideo" autoplay muted loop playsinline><source v-bind:src="'assets/video/GBVS_Gran_' + move.versions[move.activeVersion].input + '.mp4'" type="video/mp4"></video>
           <img v-else v-bind:src="'assets/img/move_images/GBVS_Gran_' + move.versions[move.activeVersion].input + '.webp'">
         </div>
-        <span class="card-title">{{ move.versions[move.activeVersion].name }}</span>
+        <span class="card-title">{{ move.rootName }} {{ move.versions[move.activeVersion].name }}</span>
       </div>
 
       <div>
@@ -95,11 +95,12 @@ var vm = new Vue({
       {
         id: 0,
         activeVersion: 0,
+        rootName: 'Reginleiv',
         versions: [
           {
             vid: 0,
             hasVideo: true,
-            name: 'Reginleiv L',
+            name: ' L',
             input: '236L',
             startup: 15,
             active: 1,
@@ -114,7 +115,7 @@ var vm = new Vue({
           {
             vid: 1,
             hasVideo: true,
-            name: 'Reginleiv M',
+            name: ' M',
             input: '236M',
             startup: 13,
             active: 1,
@@ -129,7 +130,7 @@ var vm = new Vue({
           {
             vid: 2,
             hasVideo: true,
-            name: 'Reginleiv Plus',
+            name: ' Plus',
             input: '236H',
             startup: 15,
             active: 1,
@@ -146,11 +147,12 @@ var vm = new Vue({
       {
         id: 1,
         activeVersion: 0,
+        rootName: 'Rising Sword',
         versions: [
           {
             vid: 0,
             hasVideo: true,
-            name: 'Rising Sword L',
+            name: ' L',
             input: '623L',
             startup: 7,
             active: 8,
@@ -165,7 +167,7 @@ var vm = new Vue({
           {
             vid: 1,
             hasVideo: true,
-            name: 'Rising Sword M',
+            name: ' M',
             input: '623M',
             startup: 7,
             active: 14,
@@ -180,7 +182,7 @@ var vm = new Vue({
           {
             vid: 2,
             hasVideo: true,
-            name: 'Rising Sword Plus',
+            name: ' Plus',
             input: '623H',
             startup: 7,
             active: 22,
@@ -197,11 +199,12 @@ var vm = new Vue({
       {
         id: 2,
         activeVersion: 0,
+        rootName: 'Overdrive Surge',
         versions: [
           {
             vid: 0,
             hasVideo: true,
-            name: 'Overdrive Surge L',
+            name: ' L',
             input: '214L',
             startup: 13,
             active: 2,
@@ -216,7 +219,7 @@ var vm = new Vue({
           {
             vid: 1,
             hasVideo: true,
-            name: 'Overdrive Surge M',
+            name: ' M',
             input: '214M',
             startup: 16,
             active: 13,
@@ -231,7 +234,7 @@ var vm = new Vue({
           {
             vid: 2,
             hasVideo: true,
-            name: 'Overdrive Surge Plus',
+            name: ' Plus',
             input: '214H',
             startup: 13,
             active: 13,
