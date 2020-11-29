@@ -11,14 +11,19 @@
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
+  <div id="app">
+
   <nav class="red lighten-1" role="navigation">
     <div class="nav-wrapper container"><a id="logo-container" href="index.html" class="brand-logo">BetterWiki</a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="chara-viewer.html">Character Data</a></li>
-        <li><a href="Blog.html">Getting Started</a></li>
+        <li v-if="locale == 0"><a v-on:click="locale = 1">Switch to Japanese <img width="40px"src="assets/img/japan.svg"/></a></li>
+        <li v-else><a v-on:click="locale = 0">英語に通訳 <img width="40px"src="assets/img/usa.svg"/></a></li>
+        <li><a href="chara-viewer.html"> {{ localization[locale].wiki }} </a></li>
+        <li><a href="Blog.html"> {{ localization[locale].blog }} </a></li>
       </ul>
 
       <ul id="nav-mobile" class="sidenav">
+        <a class="waves-effect waves-light btn-small">Button</a>
         <li><a href="chara-viewer.html">Character Data</a></li>
         <li><a href="Blog.html">Getting Started</a></li>
       </ul>
@@ -26,14 +31,17 @@
     </div>
   </nav>
 
-  <div class="container section" id="app">
+  <div class="container section">
     <move-data-item 
       v-for="move in moveList"
       v-bind:move="move"
+      v-bind:locale="locale"
+      v-bind:localization="localization"
       v-bind:key="move.id"
     ></move-data-item>
   </div>
   <br><br>
+  </div>
 
   <footer class="page-footer grey lighten-4">
     <div class="container">
@@ -55,6 +63,7 @@
           <h5 class="grey-text text-darken-4">Asset Sources</h5>
           <ul>
             <li><a class="blue-text" href="https://arcsystemworks.com/" target="_Blank">Arc System Works</a></li>
+            <li><a class="blue-text" href="https://www.flaticon.com/authors/freepik" target="_Blank">Freepik</a></li>
           </ul>
         </div>
       </div>
