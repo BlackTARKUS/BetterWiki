@@ -23,7 +23,8 @@
       </ul>
 
       <ul id="nav-mobile" class="sidenav">
-        <a class="waves-effect waves-light btn-small">Button</a>
+        <li v-if="locale == 0"><a v-on:click="locale = 1">Switch to Japanese <img width="40px"src="assets/img/japan.svg"/></a></li>
+        <li v-else><a v-on:click="locale = 0">英語に通訳 <img width="40px"src="assets/img/usa.svg"/></a></li>
         <li><a href="chara-viewer.html">Character Data</a></li>
         <li><a href="Blog.html">Getting Started</a></li>
       </ul>
